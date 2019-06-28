@@ -15,7 +15,7 @@ def spel():
     _____|""")
 
     if turns == 8:
-        print("""  ____
+        print("""     ____
          |
          |
          |
@@ -24,7 +24,7 @@ def spel():
     _____|""")
 
     if turns == 7:
-        print("""  ____
+        print("""     ____
         \|
          |
          |
@@ -33,7 +33,7 @@ def spel():
     _____|""")
 
     if turns == 6:
-        print("""  ____
+        print("""     ____
       | \|
          |
          |
@@ -42,7 +42,7 @@ def spel():
     _____|""")
 
     if turns == 5:
-        print("""  ____
+        print("""     ____
       | \|
       o  |
          |
@@ -51,7 +51,7 @@ def spel():
     _____|""")
 
     if turns == 4:
-        print("""  ____
+        print("""     ____
       | \|
       o  |
       |  |
@@ -60,7 +60,7 @@ def spel():
     _____|""")
 
     if turns == 3:
-        print("""  ____
+        print("""     ____
       | \|
       o  |
      /|\ |
@@ -69,7 +69,7 @@ def spel():
     _____|""")
 
     if turns == 2:
-        print("""  ____
+        print("""     ____
       | \|
       o  |
      /|\ |
@@ -79,7 +79,7 @@ def spel():
 
     if turns == 1:
 
-        print("Je hebt het woord", hetwoord, "niet kunnen raden, volgende keer beter!")
+        print("Je hebt het woord", hetwoord, "niet kunnen raden", naam, "volgende keer beter!")
         print()
         spel();
     
@@ -93,7 +93,8 @@ def spel():
   hetwoord= random.choice(woordenlijst)
   lengtewoord = len(hetwoord)
   puntjes = [" ~ "] *lengtewoord
-
+  ja = "ja"
+  nee = "nee"
 
   naam = input("Vul hier je naam in: ")
   print()
@@ -111,9 +112,17 @@ def spel():
     userGuess = input("geef letter/woord> ")
     #zit letter in woord? Zo ja, waar dan?
     if userGuess == hetwoord:
-      print ("gefeliciteerd je hebt het woord", hetwoord, "geraden")
+      print ("gefeliciteerd", naam, "je hebt het woord geraden")
       print()
-      spel()
+      print("wil je nog een keer spelen? ja of nee?")
+
+      if userGuess == ja:
+       spel()
+
+      if userGuess == nee:
+       quit()
+       
+
     else:
       if userGuess in hetwoord:
         for idx, letter in enumerate(hetwoord):
