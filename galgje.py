@@ -3,7 +3,7 @@ def spel():
 
   turns = 10
 
-    #galgontwikkeling
+    # galgontwikkeling
   def drawgalgjes():
     if turns == 9:
         print("Jammer, nog 8 pogingen")
@@ -98,15 +98,15 @@ def spel():
         spel();
     
 
- #de woorden die gebruikt gaan worden
+ # de woorden die gebruikt gaan worden
   woordenlijst = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier",
   "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 
- #letters die zijn toegestaan
+ # letters die zijn toegestaan
   validLetters = "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
-
-
- #random woord word gekozen en door puntjes vervangen 
+   
+ 
+ # random woord word gekozen en door puntjes vervangen 
 
   hetwoord= random.choice(woordenlijst)
   lengtewoord = len(hetwoord)
@@ -114,7 +114,7 @@ def spel():
   ja = "ja"
   nee = "nee"
 
- #introductie
+ # introductie
   naam = input("Vul hier je naam in: ")
   print()
   print("Welkom", naam,"bij ons galgje spel")
@@ -126,10 +126,10 @@ def spel():
  
 
 
- #text wanner je het goed hebt
+ # text wanner je het goed hebt
   while game == True:
     userGuess = input("geef letter/woord> ")
-    #zit letter in woord? Zo ja, waar dan?
+    # zit letter in woord? Zo ja, waar dan?
     if userGuess == hetwoord:
       print ("gefeliciteerd", naam, "je hebt het woord geraden")
       print()
@@ -149,11 +149,12 @@ def spel():
           if(letter == userGuess):
             puntjes[idx] = userGuess
       
-      #zo niet, beurt eraf en galgjes tekenen
+      # zo niet, beurt eraf en galgjes tekenen
       else:
         turns -= 1
         drawgalgjes()
-
+      
+    
     print(''.join(puntjes))
 
 
@@ -163,7 +164,7 @@ def spel():
       print("je hebt het woord", hetwoord, "geraden")
 
   gokje = input()
- 
+ # wanneer het woord niet in de geldige letters zit, beurt eraf
   if userGuess not in validLetters:
    turns -= 1
 
