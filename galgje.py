@@ -85,7 +85,7 @@ def spel():
     
 
 
-  woordenlijst = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", 
+  woordenlijst = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier",
   "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 
 
@@ -115,11 +115,12 @@ def spel():
       print ("gefeliciteerd", naam, "je hebt het woord geraden")
       print()
       print("wil je nog een keer spelen? ja of nee?")
+      print("Wat goed van je!!!. je had alleen deze letters nodig om het woord te raden")
 
-      if userGuess == ja:
+    if userGuess == ja:
        spel()
 
-      if userGuess == nee:
+    if userGuess == nee:
        quit()
        
 
