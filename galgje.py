@@ -92,10 +92,9 @@ def spel():
   lengtewoord = len(hetwoord)
   puntjes = ["_ "] * lengtewoord
 
-  print(hetwoord)
-
 
   naam = input("vul hier je naam in: ")
+  print()
   print("Welkom", naam,"bij ons galgje spel")
   game = True
 
